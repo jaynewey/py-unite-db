@@ -1,0 +1,70 @@
+name: CI
+
+on:
+  push:
+    branches: 
+      - master
+      - main
+  pull_request:
+    branches:
+      - master
+      - main
+
+jobs:
+  main:
+    name: Test, lint, type check, docs
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.10"]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Set up PDM
+      uses: pdm-project/setup-pdm@v2.5
+      with:
+        python-version: "${{ matrix.python-version }}"
+
+    - name: Set cache variables
+      id: set_variables
+      run: |
+        echo "::set-output name=PIP_CACHE::$(pip cache dir)"
+        echo "::set-output name=PDM_CACHE::$(pdm config cache_dir)"
+    
+    - name: Set up cache
+      uses: actions/cache@v2
+      with:
+        path: |
+          ${{ steps.set_variables.outputs.PIP_CACHE }}
+          ${{ steps.set_variables.outputs.PDM_CACHE }}
+        key: checks-cache
+
+    - name: Resolve dependencies
+      run: pdm lock
+
+    - name: Install dependencies
+      run: pdm install
+
+    - name: Symlink stubs
+      run: pdm run stubs
+
+    - name: Run tests
+      run: pdm run pytest
+
+    - name: Run linting
+      run: pdm run lint
+    
+    - name: Run type checking
+      run: pdm run typecheck
+
+    - name: Run format checking
+      run: pdm run formatcheck
+    
+    - name: Check docs build
+      run: |
+        pdm run fetch_charm
+        pdm run mkdocs build --verbose --strict

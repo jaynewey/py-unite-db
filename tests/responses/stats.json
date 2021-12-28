@@ -1,0 +1,172 @@
+[
+    {
+        "name": "Absol",
+        "level": [
+            {
+                "level": 1,
+                "hp": 3000,
+                "attack": 170,
+                "defense": 52,
+                "sp_attack": 20,
+                "sp_defense": 36,
+                "crit": 0,
+                "cdr": 0,
+                "lifesteal": 0
+            },
+            {
+                "level": 2,
+                "hp": 3107,
+                "attack": 186,
+                "defense": 59,
+                "sp_attack": 23,
+                "sp_defense": 41,
+                "crit": 0,
+                "cdr": 0,
+                "lifesteal": 0
+            },
+            {
+                "level": 3,
+                "hp": 3224,
+                "attack": 204,
+                "defense": 67,
+                "sp_attack": 27,
+                "sp_defense": 47,
+                "crit": 0,
+                "cdr": 0,
+                "lifesteal": 0
+            },
+            {
+                "level": 4,
+                "hp": 3353,
+                "attack": 223,
+                "defense": 76,
+                "sp_attack": 31,
+                "sp_defense": 53,
+                "crit": 0,
+                "cdr": 0,
+                "lifesteal": 0
+            },
+            {
+                "level": 5,
+                "hp": 3495,
+                "attack": 244,
+                "defense": 86,
+                "sp_attack": 36,
+                "sp_defense": 60,
+                "crit": 5,
+                "cdr": 10,
+                "lifesteal": 0
+            },
+            {
+                "level": 6,
+                "hp": 3651,
+                "attack": 267,
+                "defense": 97,
+                "sp_attack": 41,
+                "sp_defense": 68,
+                "crit": 5,
+                "cdr": 10,
+                "lifesteal": 0
+            },
+            {
+                "level": 7,
+                "hp": 3823,
+                "attack": 293,
+                "defense": 109,
+                "sp_attack": 47,
+                "sp_defense": 76,
+                "crit": 5,
+                "cdr": 10,
+                "lifesteal": 0
+            },
+            {
+                "level": 8,
+                "hp": 4012,
+                "attack": 321,
+                "defense": 122,
+                "sp_attack": 53,
+                "sp_defense": 85,
+                "crit": 5,
+                "cdr": 10,
+                "lifesteal": 0
+            },
+            {
+                "level": 9,
+                "hp": 4221,
+                "attack": 352,
+                "defense": 136,
+                "sp_attack": 60,
+                "sp_defense": 95,
+                "crit": 10,
+                "cdr": 20,
+                "lifesteal": 0
+            },
+            {
+                "level": 10,
+                "hp": 4451,
+                "attack": 387,
+                "defense": 152,
+                "sp_attack": 68,
+                "sp_defense": 106,
+                "crit": 10,
+                "cdr": 20,
+                "lifesteal": 0
+            },
+            {
+                "level": 11,
+                "hp": 4704,
+                "attack": 425,
+                "defense": 170,
+                "sp_attack": 76,
+                "sp_defense": 118,
+                "crit": 10,
+                "cdr": 20,
+                "lifesteal": 0
+            },
+            {
+                "level": 12,
+                "hp": 4983,
+                "attack": 467,
+                "defense": 189,
+                "sp_attack": 85,
+                "sp_defense": 131,
+                "crit": 10,
+                "cdr": 20,
+                "lifesteal": 0
+            },
+            {
+                "level": 13,
+                "hp": 5290,
+                "attack": 513,
+                "defense": 210,
+                "sp_attack": 95,
+                "sp_defense": 146,
+                "crit": 10,
+                "cdr": 20,
+                "lifesteal": 0
+            },
+            {
+                "level": 14,
+                "hp": 5628,
+                "attack": 564,
+                "defense": 233,
+                "sp_attack": 106,
+                "sp_defense": 162,
+                "crit": 10,
+                "cdr": 20,
+                "lifesteal": 0
+            },
+            {
+                "level": 15,
+                "hp": 6000,
+                "attack": 620,
+                "defense": 259,
+                "sp_attack": 118,
+                "sp_defense": 180,
+                "crit": 10,
+                "cdr": 20,
+                "lifesteal": 0
+            }
+        ]
+    }
+]

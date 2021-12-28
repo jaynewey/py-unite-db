@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Eject Button",
+        "display_name": "Eject Button",
+        "description": "Quickly move in a designated direction.",
+        "tier": "S",
+        "cooldown": 70,
+        "level": 11
+    }
+]

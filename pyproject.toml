@@ -1,0 +1,69 @@
+[project]
+name = "py_unite_db"
+version = "0.1.0"
+description = "Unnofficial Python wrapper of the unite-db.com REST API."
+authors = [
+    {name = "Jay Newey", email = "jay.newey@protonmail.com"},
+]
+dependencies = [
+    "uplink~=0.9",
+    "pydantic~=1.8"]
+requires-python = ">=3.9"
+license = {text = "GPL-2.0-only"}
+
+[project.urls]
+homepage = ""
+
+[project.optional-dependencies]
+[build-system]
+requires = ["pdm-pep517"]
+build-backend = "pdm.pep517.api"
+
+[tool]
+[tool.pdm]
+[tool.pdm.dev-dependencies]
+dev = [
+    "python-semantic-release~=7.19",
+    "black<22,>=21.11b1",
+    "isort~=5.10",
+    "mypy~=0.910",
+    "flake8~=4.0",
+    "pytest",
+    "requests-mock",
+    "types-requests",
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocstrings",
+]
+
+[tool.pdm.scripts]
+format = {shell = "pdm run isort py_unite_db tests && pdm run black py_unite_db tests"}
+formatcheck = {shell = "pdm run black py_unite_db tests --check"}
+stubs = {shell = "pdm run python scripts/stubs.py ."}
+typecheck = {shell = "pdm run stubs && pdm run mypy --config-file .stubs/mypy.ini py_unite_db/ tests"}
+lint = {shell = "pdm run flake8 py_unite_db tests"}
+fetch_charm = {shell = "pdm run python scripts/fetch_charm.py docs/assets/overrides/.icons/"}
+
+[tool.black]
+exclude = '''
+/(
+    \.git
+  | \.mypy_cache
+  | \.tox
+  | venv
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | __pypackages__
+)/
+'''
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# uplink is using deprecated asyncio functions right now, suppress warnings
+filterwarnings = "ignore::DeprecationWarning:uplink.clients.*:"

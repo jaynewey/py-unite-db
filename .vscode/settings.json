@@ -1,0 +1,22 @@
+{
+  "editor.formatOnSave": true,
+  "python.autoComplete.extraPaths": [
+    "__pypackages__/3.9/lib"
+  ],
+  "python.analysis.extraPaths": [
+    "__pypackages__/3.9/lib"
+  ],
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.mypyArgs": [
+    "--config-file=${workspaceFolder}/.stubs/mypy.ini"
+  ],
+  "python.linting.enabled": true,
+  "python.formatting.provider": "black",
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  }
+}

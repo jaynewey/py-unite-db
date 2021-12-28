@@ -1,0 +1,25 @@
+[
+    {
+        "name": "Aeos Cookie",
+        "display_name": "Aeos Cookie",
+        "bonus1": "HP +240",
+        "stats": [
+            {
+                "label": "HP",
+                "percent": false,
+                "float": 0,
+                "initial": 8,
+                "start": 0,
+                "skip": 0,
+                "increment": 8,
+                "initial_diff": 0
+            }
+        ],
+        "description1": "When you score a goal, your maximum HP is raised for the rest of the match by 100/150/200. (This bonus caps at 6 stacks)",
+        "tier": "C",
+        "description3": "Max HP",
+        "level1": "100",
+        "level10": "150",
+        "level20": "200"
+    }
+]

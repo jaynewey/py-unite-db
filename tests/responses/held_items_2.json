@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Assault Vest",
+        "display_name": "Assault Vest",
+        "bonus1": "HP +270",
+        "bonus2": "Sp. Defense +42",
+        "stats": [
+            {
+                "label": "HP",
+                "percent": false,
+                "float": 0,
+                "initial": 18,
+                "start": 0,
+                "skip": 1,
+                "increment": 18,
+                "initial_diff": 0
+            },
+            {
+                "label": "Sp. Defense",
+                "percent": false,
+                "float": 1,
+                "initial": 0,
+                "start": 1,
+                "skip": 1,
+                "increment": 2.8
+            }
+        ],
+        "description1": "Gain a shield against Sp. Attack damage while out of combat for 9%/12%/15% max HP. (7s after leaving combat)",
+        "tier": "C",
+        "description3": "Max HP",
+        "level1": "9%",
+        "level10": "12%",
+        "level20": "15%"
+    }
+]

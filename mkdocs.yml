@@ -1,0 +1,90 @@
+site_name: "py-unite-db"
+site_description: "Unnofficial Python wrapper of the unite-db.com REST API."
+site_url: "https://jaynewey.github.io/py-unite-db"
+repo_url: "https://github.com/jaynewey/py-unite-db"
+repo_name: "jaynewey/py-unite-db"
+
+nav:
+- Home:
+  - Overview: index.md
+  - Todo: todo.md
+- Code Reference:
+  - UniteDb: reference/unite_db.md
+  - Models:
+    - Pokemon:
+      - reference/models/pokemon.md
+      - reference/models/pokemon/evolution.md
+      - reference/models/pokemon/stars.md
+      - reference/models/pokemon/stats.md
+    - Items:
+      - reference/models/item.md
+      - reference/models/items/held_item.md
+      - reference/models/items/battle_item.md
+- Development:
+  - development/contributing.md
+  - development/script_reference.md
+
+theme:
+  name: material
+  custom_dir: docs/assets/overrides
+  icon:
+    logo: charm/book
+    repo: charm/github
+  favicon: assets/logo.png
+  features:
+  - navigation.tabs
+  - navigation.top
+  palette:
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: deep orange
+    accent: indigo
+    toggle:
+      icon: charm/sun
+      name: Switch to dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: indigo
+    accent: deep orange
+    toggle:
+      icon: charm/moon
+      name: Switch to light mode
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+- search
+- mkdocstrings:
+    default_handler: python
+    handlers:
+      python:
+        selection:
+          filters:
+            - "!^_"  # exclude all members starting with _
+            - "!Config" # exclude BaseModel Config attribute
+          inherited_members: true
+        rendering:
+          show_root_heading: true
+          show_if_no_docstring: true
+          show_signature_annotations: true
+    watch:
+    - py_unite_db
+
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      options:
+        custom_icons:
+          - docs/assets/overrides/.icons
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra:
+  social:
+    - icon: charm/github
+      link: https://github.com/jaynewey
+      name: Jay Newey on GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://uk.linkedin.com/in/jay-newey-369959195
+      name: Jay Newey on LinkedIn
