@@ -1,6 +1,6 @@
 [project]
 name = "py_unite_db"
-version = "0.1.0"
+version = "0.1.1"
 description = "Unnofficial Python wrapper of the unite-db.com REST API."
 authors = [
     {name = "Jay Newey", email = "jay.newey@protonmail.com"},
