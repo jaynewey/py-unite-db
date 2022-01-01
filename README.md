@@ -14,6 +14,14 @@ Please be warned that this is an unofficial wrapper and the REST API is a privat
 
 If you are publishing any of the data collected with this API, please give credit to [`unite-db`](https://unite-db.com/). They spend many hours collecting this data.
 
+### Installation
+
+The package is installable via `pip`.
+
+```sh
+pip install py-unite-db
+```
+
 ### Usage
 
 Import the `UniteDb` object:
