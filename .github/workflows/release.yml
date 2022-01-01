@@ -46,11 +46,13 @@ jobs:
       run: pdm run stubs
     
     - name: Build and Release
-      uses: relekang/python-semantic-release@master
-      with:
-        github_token: ${{ secrets.GH_TOKEN }}
-        repository_username: __token__
-        repository_password: ${{ secrets.PYPI_TOKEN }}
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "action@github.com"
+        pdm run semantic-release publish -v DEBUG -D commit_author="github-actions <action@github.com>"
 
     - name: Build and deploy docs
       run: |
