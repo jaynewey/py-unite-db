@@ -12,7 +12,7 @@ requires-python = ">=3.9"
 license = {text = "GPL-2.0-only"}
 
 [project.urls]
-homepage = ""
+homepage = "https://github.com/jaynewey/py-unite-db"
 
 [project.optional-dependencies]
 [build-system]
@@ -67,3 +67,11 @@ profile = "black"
 testpaths = ["tests"]
 # uplink is using deprecated asyncio functions right now, suppress warnings
 filterwarnings = "ignore::DeprecationWarning:uplink.clients.*:"
+
+[tool.semantic_release]
+branch = "main"
+version_variable = ["py_unite_db/__init__.py:__version__"]
+version_toml = "pyproject.toml:project.version"
+build_command = "pdm build"
+# api is unstable for now, leave at 0.*.*
+major_on_zero = false
