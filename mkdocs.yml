@@ -61,7 +61,11 @@ plugins:
         selection:
           filters:
             - "!^_"  # exclude all members starting with _
-            - "!Config" # exclude BaseModel Config attribute
+            # exclude BaseModel inherited attrs
+            - "!Config"
+            - "!copy$"
+            - "!dict$"
+            - "!json$"
           inherited_members: true
         rendering:
           show_root_heading: true
