@@ -42,6 +42,6 @@
 
 ## Release
 
-- [ ] Set up package release on PyPI
-    - [ ] Set up automatic github workflow
-    - [ ] Add installation guide
+- [x] Set up package release on PyPI
+    - [x] Set up automatic github workflow
+    - [x] Add installation guide
