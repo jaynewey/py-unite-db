@@ -4,6 +4,10 @@
 
 ## Introduction
 
+[`unite-db`](https://unite-db.com/) is a website dedicated to maintaining a database on various stats in the game Pokemon Unite including stats for Pokemon, Battle Items and Held Items.
+
+This wrapper provides a simple, Pythonic interface to those stats via a REST API, with automatic result caching.
+
 Please be warned that this is an unofficial wrapper and the REST API is a private one, so please do not abuse it.
 
 If you are publishing any of the data collected with this API, please give credit to [`unite-db`](https://unite-db.com/). They spend many hours collecting this data.
