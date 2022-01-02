@@ -8,6 +8,7 @@ nav:
 - Home:
   - Overview: index.md
   - Todo: todo.md
+  - Changelog: changelog.md
 - Code Reference:
   - UniteDb: reference/unite_db.md
   - Models:
@@ -83,6 +84,7 @@ markdown_extensions:
           - docs/assets/overrides/.icons
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.snippets
 
 extra:
   social:
