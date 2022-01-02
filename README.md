@@ -2,6 +2,7 @@
 
 ![GPL-2 Licensed](https://img.shields.io/badge/license-GPL--2-green)
 [![.github/workflows/ci.yml](https://github.com/jaynewey/py-unite-db/actions/workflows/ci.yml/badge.svg)](https://github.com/jaynewey/py-unite-db/actions/workflows/ci.yml)
+[![PyPI](https://img.shields.io/pypi/v/py-unite-db)](https://pypi.org/project/py-unite-db/)
 [![Docs: MkDocs](https://img.shields.io/badge/docs-mkdocs-blue)](https://jaynewey.github.io/py-unite-db)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
@@ -10,9 +11,21 @@
 
 ## Introduction
 
+[`unite-db`](https://unite-db.com/) is a website dedicated to maintaining a database on various stats in the game Pokemon Unite including stats for Pokemon, Battle Items and Held Items.
+
+This wrapper provides a simple, Pythonic interface to those stats via a REST API, with automatic result caching.
+
 Please be warned that this is an unofficial wrapper and the REST API is a private one, so please do not abuse it.
 
 If you are publishing any of the data collected with this API, please give credit to [`unite-db`](https://unite-db.com/). They spend many hours collecting this data.
+
+### Installation
+
+The package is installable via `pip`.
+
+```sh
+pip install py-unite-db
+```
 
 ### Usage
 
