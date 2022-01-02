@@ -2,6 +2,7 @@
 
 ![GPL-2 Licensed](https://img.shields.io/badge/license-GPL--2-green)
 [![.github/workflows/ci.yml](https://github.com/jaynewey/py-unite-db/actions/workflows/ci.yml/badge.svg)](https://github.com/jaynewey/py-unite-db/actions/workflows/ci.yml)
+[![PyPI](https://img.shields.io/pypi/v/py-unite-db)](https://pypi.org/project/py-unite-db/)
 [![Docs: MkDocs](https://img.shields.io/badge/docs-mkdocs-blue)](https://jaynewey.github.io/py-unite-db)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
