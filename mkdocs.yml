@@ -9,6 +9,7 @@ nav:
   - Overview: index.md
   - Todo: todo.md
   - Changelog: changelog.md
+  - License: license.md
 - Code Reference:
   - UniteDb: reference/unite_db.md
   - Models:
