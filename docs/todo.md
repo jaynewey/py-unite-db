@@ -27,11 +27,11 @@
 
 ## Tests
 
-- [ ] Models
+- [x] Models
     - [x] Pokemon
         - [x] Stats
         - [x] Stars
-        - [ ] Evolution 
+        - [x] Evolution
     - [x] Item
         - [x] Held Item
         - [x] Battle Item
