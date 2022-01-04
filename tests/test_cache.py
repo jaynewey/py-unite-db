@@ -33,10 +33,9 @@ def test_endpoint_cache():
 
 def test_pokemon_cache():
     mock_unite_db = MockUniteDb()
-    absol = mock_unite_db.pokemon[0]
 
-    assert absol.name == "Absol"
-    assert absol.stats[0].hp == 3000
+    assert mock_unite_db.pokemon[0].name == "Blastoise"
+    assert mock_unite_db.pokemon[0].stats[0].hp == 3225
 
     # now change the data at "pokemon.json" and "stats.json"
 
@@ -50,12 +49,12 @@ def test_pokemon_cache():
         )
 
     # the cached version should not change
-    assert mock_unite_db.pokemon[0].name == "Absol"
-    assert mock_unite_db.pokemon[0].stats[0].hp == 3000
+    assert mock_unite_db.pokemon[0].name == "Blastoise"
+    assert mock_unite_db.pokemon[0].stats[0].hp == 3225
 
     # now remove cache (forcing the refetch)
     del mock_unite_db.pokemon
 
     # value is now new value
-    assert mock_unite_db.pokemon[0].name == "Blastoise"
-    assert mock_unite_db.pokemon[0].stats[0].hp == 3225
+    assert mock_unite_db.pokemon[0].name == "Absol"
+    assert mock_unite_db.pokemon[0].stats[0].hp == 3000
