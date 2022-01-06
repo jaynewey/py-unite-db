@@ -84,6 +84,35 @@ class Pokemon(BaseModel):
         level = min(POKEMON_MAX_LEVEL, max(POKEMON_MIN_LEVEL, level))
         return self.stats[level - 1]
 
+    def name_at(self, level: int) -> str:
+        """Gets the name of the pokemon at a given level.
+
+        This is only really useful if the Pokemon has evolutions.
+        For example, Blastoise only becomes Blastoise at level 9.
+
+        Example:
+            >>> from py_unite_db import UniteDb
+            >>> UniteDb().pokemon[1].name
+            'Blastoise'
+            >>> UniteDb().pokemon[1].name_at(1)
+            'Squirtle'
+            >>> UniteDb().pokemon[1].name_at(5)
+            'Wartortle'
+            >>> UniteDb().pokemon[1].name_at(9)
+            'Blastoise'
+
+        If the level given is less than 1, gets level 1.
+        If the level given is more than 15, gets level 15.
+        """
+        # if no evolutions or level is larger than or equal to final
+        if not self.evolution or level >= self.evolution[-1].level:
+            return self.name
+        # if more than one evolution and middle stage
+        elif level >= self.evolution[0].level:
+            return self.evolution[-1].name
+        # if one evolution or base stage
+        return self.evolution[0].name
+
     @staticmethod
     def _transform(v: dict[str, Any]) -> dict[str, Any]:
         return _flatten(v, "tags")
