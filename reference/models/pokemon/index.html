@@ -618,6 +618,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#py_unite_db.models.pokemon.Pokemon.name_at" class="md-nav__link">
+    name_at()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#py_unite_db.models.pokemon.Pokemon.stats_at" class="md-nav__link">
     stats_at()
   </a>
@@ -949,6 +956,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#py_unite_db.models.pokemon.Pokemon.name_at" class="md-nav__link">
+    name_at()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#py_unite_db.models.pokemon.Pokemon.stats_at" class="md-nav__link">
     stats_at()
   </a>
@@ -1073,6 +1087,35 @@ py_unite_db.models.pokemon.Pokemon            (<span title="py_unite_db.models.b
 <span class="sd">        &quot;&quot;&quot;</span>  <span class="c1"># noqa: E501</span>
         <span class="n">level</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">POKEMON_MAX_LEVEL</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">POKEMON_MIN_LEVEL</span><span class="p">,</span> <span class="n">level</span><span class="p">))</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">[</span><span class="n">level</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">name_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Gets the name of the pokemon at a given level.</span>
+
+<span class="sd">        This is only really useful if the Pokemon has evolutions.</span>
+<span class="sd">        For example, Blastoise only becomes Blastoise at level 9.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; from py_unite_db import UniteDb</span>
+<span class="sd">            &gt;&gt;&gt; UniteDb().pokemon[1].name</span>
+<span class="sd">            &#39;Blastoise&#39;</span>
+<span class="sd">            &gt;&gt;&gt; UniteDb().pokemon[1].name_at(1)</span>
+<span class="sd">            &#39;Squirtle&#39;</span>
+<span class="sd">            &gt;&gt;&gt; UniteDb().pokemon[1].name_at(5)</span>
+<span class="sd">            &#39;Wartortle&#39;</span>
+<span class="sd">            &gt;&gt;&gt; UniteDb().pokemon[1].name_at(9)</span>
+<span class="sd">            &#39;Blastoise&#39;</span>
+
+<span class="sd">        If the level given is less than 1, gets level 1.</span>
+<span class="sd">        If the level given is more than 15, gets level 15.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># if no evolutions or level is larger than or equal to final</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">evolution</span> <span class="ow">or</span> <span class="n">level</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">evolution</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">level</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+        <span class="c1"># if more than one evolution and middle stage</span>
+        <span class="k">elif</span> <span class="n">level</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">evolution</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">level</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">evolution</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+        <span class="c1"># if one evolution or base stage</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">evolution</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
 
     <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">_transform</span><span class="p">(</span><span class="n">v</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
@@ -1341,6 +1384,74 @@ py_unite_db.models.pokemon.Pokemon            (<span title="py_unite_db.models.b
 
 
 
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="py_unite_db.models.pokemon.Pokemon.name_at" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">name_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span></code>
+
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Gets the name of the pokemon at a given level.</p>
+<p>This is only really useful if the Pokemon has evolutions.
+For example, Blastoise only becomes Blastoise at level 9.</p>
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">py_unite_db</span> <span class="kn">import</span> <span class="n">UniteDb</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">UniteDb</span><span class="p">()</span><span class="o">.</span><span class="n">pokemon</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+<span class="s1">&#39;Blastoise&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">UniteDb</span><span class="p">()</span><span class="o">.</span><span class="n">pokemon</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">name_at</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="s1">&#39;Squirtle&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">UniteDb</span><span class="p">()</span><span class="o">.</span><span class="n">pokemon</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">name_at</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="s1">&#39;Wartortle&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">UniteDb</span><span class="p">()</span><span class="o">.</span><span class="n">pokemon</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">name_at</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="s1">&#39;Blastoise&#39;</span>
+</code></pre></div>
+      <p>If the level given is less than 1, gets level 1.
+If the level given is more than 15, gets level 15.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>py_unite_db/models/pokemon.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">name_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Gets the name of the pokemon at a given level.</span>
+
+<span class="sd">    This is only really useful if the Pokemon has evolutions.</span>
+<span class="sd">    For example, Blastoise only becomes Blastoise at level 9.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; from py_unite_db import UniteDb</span>
+<span class="sd">        &gt;&gt;&gt; UniteDb().pokemon[1].name</span>
+<span class="sd">        &#39;Blastoise&#39;</span>
+<span class="sd">        &gt;&gt;&gt; UniteDb().pokemon[1].name_at(1)</span>
+<span class="sd">        &#39;Squirtle&#39;</span>
+<span class="sd">        &gt;&gt;&gt; UniteDb().pokemon[1].name_at(5)</span>
+<span class="sd">        &#39;Wartortle&#39;</span>
+<span class="sd">        &gt;&gt;&gt; UniteDb().pokemon[1].name_at(9)</span>
+<span class="sd">        &#39;Blastoise&#39;</span>
+
+<span class="sd">    If the level given is less than 1, gets level 1.</span>
+<span class="sd">    If the level given is more than 15, gets level 15.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># if no evolutions or level is larger than or equal to final</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">evolution</span> <span class="ow">or</span> <span class="n">level</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">evolution</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">level</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+    <span class="c1"># if more than one evolution and middle stage</span>
+    <span class="k">elif</span> <span class="n">level</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">evolution</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">level</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">evolution</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+    <span class="c1"># if one evolution or base stage</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">evolution</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
 
 
 
