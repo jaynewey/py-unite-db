@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.1 (2022-01-10)
+### Fix
+* Add `F` tier to `Tier` type ([#6](https://github.com/jaynewey/py-unite-db/issues/6)) ([`b14843e`](https://github.com/jaynewey/py-unite-db/commit/b14843e5fae7a708ee4bba8455932a905c2651a1))
+
 ## v0.2.0 (2022-01-09)
 ### Feature
 * Add `Pokemon.name_at` method ([`444b5fb`](https://github.com/jaynewey/py-unite-db/commit/444b5fb23e88a5b0591d7d17cad1a54b29e4fb9e))
