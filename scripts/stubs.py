@@ -63,7 +63,7 @@ def stubs(dir: Path):
     # create temporary mypy config to ignore stubbed packages
     mypy_config = Path("mypy.ini")
     config_contents = mypy_config.read_text() if mypy_config.exists() else ""
-    config_contents += "[mypy]\nmypy_path = $MYPY_CONFIG_FILE_DIR"
+    config_contents += "\n[mypy]\nmypy_path = $MYPY_CONFIG_FILE_DIR\n"
     config_contents += "\n" + "\n\n".join(
         f"[mypy-{pkg}.*]\nignore_errors=true" for pkg in ignore
     )
