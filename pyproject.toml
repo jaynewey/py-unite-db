@@ -68,6 +68,7 @@ profile = "black"
 testpaths = ["tests"]
 # uplink is using deprecated asyncio functions right now, suppress warnings
 filterwarnings = "ignore::DeprecationWarning:uplink.clients.*:"
+markers = "webtest: these tests query the actual live API over the web."
 
 [tool.semantic_release]
 branch = "main"
