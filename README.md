@@ -7,7 +7,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
 
-> Unnofficial Python wrapper for the unite-db.com REST API.
+> Unofficial Python wrapper for the unite-db.com REST API.
 
 ## Introduction
 
