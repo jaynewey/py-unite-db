@@ -131,3 +131,7 @@ dmypy.json
 
 # charm-icons
 docs/assets/overrides/.icons/charm
+
+
+# Pycharm
+.idea
