@@ -15,7 +15,6 @@ readme = "README.md"
 [project.urls]
 homepage = "https://github.com/jaynewey/py-unite-db"
 
-[project.optional-dependencies]
 [build-system]
 requires = ["pdm-pep517"]
 build-backend = "pdm.pep517.api"
@@ -35,6 +34,7 @@ dev = [
     "mkdocs",
     "mkdocs-material",
     "mkdocstrings",
+    "setuptools>=68.0.0",
 ]
 
 [tool.pdm.scripts]
