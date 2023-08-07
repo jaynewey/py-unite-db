@@ -1,4 +1,4 @@
-from typing import Any, Type
+from typing import Any
 
 from pydantic import BaseModel as PydanticBaseModel
 from pydantic import root_validator
@@ -11,7 +11,7 @@ class BaseModel(PydanticBaseModel):
         frozen = True  # Disable mutation of attributes and make hashable
 
     @root_validator(pre=True)
-    def _flatten_tags(cls: Type["BaseModel"], v: dict[str, Any]) -> dict[str, Any]:
+    def _flatten_tags(cls, v: dict[str, Any]) -> dict[str, Any]:
         return cls._transform(v)
 
     @staticmethod
