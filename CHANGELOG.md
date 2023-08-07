@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v0.3.0 (2023-08-07)
+
+### Feature
+
+* Add tier 'Y' and change 'F' to 'E' ([`a39b3a2`](https://github.com/jaynewey/py-unite-db/commit/a39b3a29818576476f57cae410b73d4c522f2296))
+* Gitignore folder .idea ([`e9d27d6`](https://github.com/jaynewey/py-unite-db/commit/e9d27d6fc7647ee89546ab4a9cfa4a9f93c8cf0e))
+
 ## v0.2.1 (2022-01-10)
 ### Fix
 * Add `F` tier to `Tier` type ([#6](https://github.com/jaynewey/py-unite-db/issues/6)) ([`b14843e`](https://github.com/jaynewey/py-unite-db/commit/b14843e5fae7a708ee4bba8455932a905c2651a1))
