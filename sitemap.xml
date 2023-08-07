@@ -2,72 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jaynewey.github.io/py-unite-db/</loc>
-         <lastmod>2022-03-15</lastmod>
+         <lastmod>2023-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jaynewey.github.io/py-unite-db/changelog/</loc>
-         <lastmod>2022-03-15</lastmod>
+         <lastmod>2023-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jaynewey.github.io/py-unite-db/license/</loc>
-         <lastmod>2022-03-15</lastmod>
+         <lastmod>2023-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jaynewey.github.io/py-unite-db/todo/</loc>
-         <lastmod>2022-03-15</lastmod>
+         <lastmod>2023-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jaynewey.github.io/py-unite-db/development/contributing/</loc>
-         <lastmod>2022-03-15</lastmod>
+         <lastmod>2023-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jaynewey.github.io/py-unite-db/development/script_reference/</loc>
-         <lastmod>2022-03-15</lastmod>
+         <lastmod>2023-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jaynewey.github.io/py-unite-db/reference/unite_db/</loc>
-         <lastmod>2022-03-15</lastmod>
+         <lastmod>2023-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jaynewey.github.io/py-unite-db/reference/models/item/</loc>
-         <lastmod>2022-03-15</lastmod>
+         <lastmod>2023-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jaynewey.github.io/py-unite-db/reference/models/pokemon/</loc>
-         <lastmod>2022-03-15</lastmod>
+         <lastmod>2023-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jaynewey.github.io/py-unite-db/reference/models/items/battle_item/</loc>
-         <lastmod>2022-03-15</lastmod>
+         <lastmod>2023-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jaynewey.github.io/py-unite-db/reference/models/items/held_item/</loc>
-         <lastmod>2022-03-15</lastmod>
+         <lastmod>2023-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jaynewey.github.io/py-unite-db/reference/models/pokemon/evolution/</loc>
-         <lastmod>2022-03-15</lastmod>
+         <lastmod>2023-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jaynewey.github.io/py-unite-db/reference/models/pokemon/stars/</loc>
-         <lastmod>2022-03-15</lastmod>
+         <lastmod>2023-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jaynewey.github.io/py-unite-db/reference/models/pokemon/stats/</loc>
-         <lastmod>2022-03-15</lastmod>
+         <lastmod>2023-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
