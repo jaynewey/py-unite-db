@@ -34,6 +34,7 @@ dev = [
     "mkdocs",
     "mkdocs-material",
     "mkdocstrings",
+		"mkdocstrings[python]>=0.18",
     "setuptools>=68.0.0",
     "click==8.0.3",
 ]
