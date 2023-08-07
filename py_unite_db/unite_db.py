@@ -30,14 +30,14 @@ class UniteDbBase(ApiBase):
         super().__init__(base_url, client)
 
     @endpoint
-    def held_items(self) -> list[HeldItem]:
+    def held_items(self) -> list[HeldItem]:  # type: ignore[empty-body]
         """Get all held items.
 
         Returns list of [`HeldItem`][py_unite_db.models.HeldItem].
         """
 
     @endpoint
-    def battle_items(self) -> list[BattleItem]:
+    def battle_items(self) -> list[BattleItem]:  # type: ignore[empty-body]
         """Get all battle items.
 
         Returns list of [`BattleItem`][py_unite_db.models.BattleItem].
@@ -65,14 +65,14 @@ class UniteDbBase(ApiBase):
         return [Pokemon.parse_obj(p | {"stats": stats.get(p["name"])}) for p in pokemon]
 
     @endpoint
-    def _pokemon(self):
+    def _pokemon(self):  # type: ignore[empty-body]
         """Private pokemon getter.
 
         Used in background by [py_unite_db.unite_db.UniteDbBase.pokemon]][]
         """
 
     @endpoint
-    def _stats(self):
+    def _stats(self):  # type: ignore[empty-body]
         """Private stat getter.
 
         Used in background by [py_unite_db.unite_db.UniteDbBase.pokemon]][]
