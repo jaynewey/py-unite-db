@@ -34,6 +34,7 @@ class Pokemon(BaseModel):
     [`UniteDb.pokemon`][py_unite_db.UniteDb].
 
     Example:
+        ```python
         >>> from py_unite_db import UniteDb
         >>> unite_db = UniteDb()
 
@@ -41,6 +42,7 @@ class Pokemon(BaseModel):
         'Absol'
         >>> unite_db.pokemon[0].tier
         'C'
+        ```
     """
 
     name: str = Field(..., description="Name of the Pokemon.")
@@ -73,9 +75,11 @@ class Pokemon(BaseModel):
             level: The level at which to get stats at.
 
         Example:
+            ```python
             >>> from py_unite_db import UniteDb
             >>> UniteDb().pokemon[0].stats_at(7)
             Stats(hp=3823, attack=293, defense=109, sp_attack=47, sp_defense=76, crit=5, cooldown_reduction=10, lifesteal=0)
+            ```
 
 
         If the level given is less than 1, gets level 1.
@@ -91,6 +95,7 @@ class Pokemon(BaseModel):
         For example, Blastoise only becomes Blastoise at level 9.
 
         Example:
+            ```python
             >>> from py_unite_db import UniteDb
             >>> UniteDb().pokemon[1].name
             'Blastoise'
@@ -100,6 +105,7 @@ class Pokemon(BaseModel):
             'Wartortle'
             >>> UniteDb().pokemon[1].name_at(9)
             'Blastoise'
+            ```
 
         If the level given is less than 1, gets level 1.
         If the level given is more than 15, gets level 15.
