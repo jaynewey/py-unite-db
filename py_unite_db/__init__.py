@@ -12,12 +12,14 @@ class UniteDb(UniteDbBase):
     """Wrapper for the Unite DB rest API.
 
     Example:
+        ```python
         >>> from py_unite_db import UniteDb
         >>> unite_db = UniteDb()
         >>> unite_db.pokemon[0].name
         'Absol'
         >>> unite_db.held_items[0].name
         'Aeos Cookie'
+        ```
     """
 
     def __init__(self):

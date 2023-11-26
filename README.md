@@ -1,4 +1,4 @@
-# py-unite-db 
+# py-unite-db
 
 ![GPL-2 Licensed](https://img.shields.io/badge/license-GPL--2-green)
 [![.github/workflows/ci.yml](https://github.com/jaynewey/py-unite-db/actions/workflows/ci.yml/badge.svg)](https://github.com/jaynewey/py-unite-db/actions/workflows/ci.yml)
@@ -89,7 +89,7 @@ If you are using VS Code this will be automatically done on save.
 
 ### Linting
 
-Linting is provided by [`flake8`](github.com/pycqa/flake8).
+Linting is provided by [`flake8`](https://github.com/pycqa/flake8).
 
 ```sh
 $ pdm run lint
